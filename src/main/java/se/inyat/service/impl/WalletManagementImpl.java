@@ -1,5 +1,7 @@
 package se.inyat.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import se.inyat.dao.WalletDao;
 import se.inyat.exception.WalletNotFoundException;
 import se.inyat.model.Wallet;
@@ -19,8 +21,9 @@ public class WalletManagementImpl implements WalletManagement {
 
     @Override
     public Wallet create(String walletName) {
-        if (walletName == null) throw new IllegalArgumentException("Param is not valid.", "Wallet Name");
+        if (walletName == null) throw new IllegalArgumentException("Param is not valid." + "Wallet Name");
             Wallet wallet = new Wallet(walletName);
+
             return walletDao.createWallet(wallet);
     }
 

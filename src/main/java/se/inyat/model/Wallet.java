@@ -42,7 +42,7 @@ public class Wallet {
         cryptoCurrencies.put(cryptoCurrency, newBalance);
     }
 
-    public void withdraw(CryptoCurrency cryptoCurrency, BigDecimal amount) {
+    public void withdraw(CryptoCurrency cryptoCurrency, BigDecimal amount) throws InsufficientBalanceException {
         if (amount.compareTo(BigDecimal.ZERO) <= 0)
             throw new IllegalArgumentException("Withdraw amount must be greater than zero");
         BigDecimal currentBalance = cryptoCurrencies.getOrDefault(cryptoCurrency, BigDecimal.ZERO);

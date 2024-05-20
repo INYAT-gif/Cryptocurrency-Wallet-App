@@ -1,5 +1,6 @@
 package se.inyat.dao.impl;
 
+import org.springframework.stereotype.Component;
 import se.inyat.dao.WalletDao;
 import se.inyat.model.Wallet;
 

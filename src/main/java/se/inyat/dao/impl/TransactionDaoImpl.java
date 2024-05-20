@@ -1,11 +1,13 @@
 package se.inyat.dao.impl;
 
+import org.springframework.stereotype.Component;
 import se.inyat.dao.TransactionDao;
 import se.inyat.model.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Component
 public class TransactionDaoImpl implements TransactionDao {
@@ -31,7 +33,7 @@ public class TransactionDaoImpl implements TransactionDao {
     public List<Transaction> findTransactionsByWalletId(String walletId) {
         return storage.stream()
                 .filter(transaction -> transaction.getWalletId().equals(walletId))
-                .toList();
+                .collect(Collectors.toList());
     }
 
 }
