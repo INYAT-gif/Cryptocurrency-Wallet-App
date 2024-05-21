@@ -10,10 +10,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "org.example")
+@ComponentScan(basePackages = "se.inyat")
 public class AppConfig {
 
-    /*@Bean
+    /**@Bean
     public TransactionDaoImpl transactionDao(){
         return new TransactionDaoImpl();
     }
@@ -31,7 +31,7 @@ public class AppConfig {
     @Bean
     public WalletManagementImpl walletManagement(){
         return new WalletManagementImpl(walletDao());
-    }*/
+    }
 
-
+*/
 }

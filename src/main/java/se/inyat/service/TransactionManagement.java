@@ -1,14 +1,19 @@
 package se.inyat.service;
 
-import se.inyat.model.CryptoCurrency;
-import se.inyat.model.Transaction;
+import se.inyat.domain.entity.Cryptocurrency;
+import se.inyat.domain.entity.Transaction;
 
 import java.math.BigDecimal;
 import java.util.List;
 
 public interface TransactionManagement {
-    public Transaction createDepositTransaction(String walletId, CryptoCurrency cryptoCurrency, BigDecimal amount, String description);
+    //user calls from our application
 
-    public Transaction createWithdrawTransaction(String walletId, CryptoCurrency cryptoCurrency, BigDecimal amount, String description);
+    Transaction createDepositTransaction(String walletId, Cryptocurrency cryptocurrency, BigDecimal amount, String description);
+
+    Transaction createWithdrawalTransaction(String walletId, Cryptocurrency cryptocurrency, BigDecimal amount, String description);
+
+    //returnType
     List<Transaction> getTransactionsByWalletId(String walletId);
+//Define more as needed
 }
