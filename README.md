@@ -1,4 +1,4 @@
-# Cryptocurrency Wallet Management System
+# Cryptocurrency Wallet Management System (Console based app)
 
 This project is a simple cryptocurrency wallet management system built with Java and Spring Framework. It allows users to create wallets, perform deposit and withdrawal transactions, and retrieve transaction histories.
 
