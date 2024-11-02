@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/1e61d886-993a-42d5-ba12-1b67041a2cd0)
 # Cryptocurrency Wallet Management System (Console based app)
 
 This project is a simple cryptocurrency wallet management system built with Java and Spring Framework. It allows users to create wallets, perform deposit and withdrawal transactions, and retrieve transaction histories.
