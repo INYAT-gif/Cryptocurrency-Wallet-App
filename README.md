@@ -1,90 +1,46 @@
 ![image](https://github.com/user-attachments/assets/1e61d886-993a-42d5-ba12-1b67041a2cd0)
-# Cryptocurrency Wallet Management System (Console based app)
+A user-friendly cryptocurrency wallet app that allows users to manage their digital assets, track balances, and send/receive cryptocurrencies.
+---
+## 🚀 Features
+- View cryptocurrency balances in real-time.
+- Send and receive digital currencies.
+- Multi-crypto support.
+- Transaction history tracking.
 
-This project is a simple cryptocurrency wallet management system built with Java and Spring Framework. It allows users to create wallets, perform deposit and withdrawal transactions, and retrieve transaction histories.
+---
 
-## Table of Contents
-- [Getting Started](#getting-started)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Example](#example)
+## 🛠️ Technologies
 
-## Getting Started
+- **React.js**: Frontend framework.
+- **Node.js**: Backend integration.
+- **Web3.js**: Ethereum blockchain interaction.
 
-These instructions will help you set up the project on your local machine for development and testing purposes.
+---
 
-### Prerequisites
+## ⚙️ Getting Started
 
-Ensure you have the following software installed on your machine:
+1. Clone the repository:
 
-- Java Development Kit (JDK) 8 or higher
-- Maven
-- Spring Framework
+   ```bash
+   git clone https://github.com/INYAT-gif/Cryptocurrency-Wallet-App.git
+   cd Cryptocurrency-Wallet-App
+   ```
 
-### Installation
+2. Install dependencies:
 
-Fork the repository to your local machine.
-   
-### Project Structure
-src/main/java
-│
-├── se.inyat
-│   ├── App.java                            # Main application entry point
-│   ├── config
-│   │   └── AppConfig.java                  # Spring configuration class
-│   ├── dao
-│   │   ├── TransactionDao.java             # DAO interface for transactions
-│   │   └── WalletDao.java                  # DAO interface for wallets
-│   ├── domain
-│   │   └── entity
-│   │       ├── Cryptocurrency.java         # Cryptocurrency entity
-│   │       ├── Transaction.java            # Transaction entity
-│   │       └── Wallet.java                 # Wallet entity
-│   ├── exception
-│   │   ├── WalletNotFoundException.java    # Exception for wallet not found
-│   │   └── WalletValidationException.java  # Exception for wallet validation errors
-│   ├── service
-│   │   ├── TransactionManagement.java      # Service interface for transaction management
-│   │   ├── WalletManagement.java           # Service interface for wallet management
-│   │   └── impl
-│   │       ├── TransactionManagementImpl.java # Implementation of TransactionManagement
-│   │       └── WalletManagementImpl.java      # Implementation of WalletManagement
+   ```bash
+   npm install
+   ```
 
-### Example 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import se.inyat.config.AppConfig;
-import se.inyat.domain.entity.Cryptocurrency;
-import se.inyat.domain.entity.Transaction;
-import se.inyat.domain.entity.Wallet;
-import se.inyat.service.TransactionManagement;
-import se.inyat.service.WalletManagement;
+3. Start the app:
 
-import java.math.BigDecimal;
+   ```bash
+   npm start
+   ```
 
-public class App {
+Access the app at: [http://localhost:3000](http://localhost:3000)
 
-    public static void main(String[] args) {
+---
 
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        WalletManagement walletManagement = context.getBean(WalletManagement.class);
-        TransactionManagement transactionManagement = context.getBean(TransactionManagement.class);
-
-        Wallet wallet = walletManagement.create("My Wallet");
-
-        Transaction depositTransactionBTC = transactionManagement.createDepositTransaction(
-                wallet.getId(),
-                Cryptocurrency.BTC,
-                new BigDecimal(10),
-                "Test transaction");
-
-        Transaction depositTransactionETH = transactionManagement.createDepositTransaction(
-                wallet.getId(),
-                Cryptocurrency.ETH,
-                new BigDecimal(5),
-                "Test transaction");
-
-        System.out.println(walletManagement.getById(wallet.getId()));
-    }
-}
-
+Made with ❤️ by [Inyat Nathani](https://www.linkedin.com/in/inyat/)
+```
